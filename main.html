@@ -1,16 +1,107 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Adoption Form</title>
+
+  <style>
+    /* Apply a calm background color */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f7f7f7, #e8f5e9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Style the form container */
+    form {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    /* Labels */
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    /* Inputs, select, textarea */
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    /* Checkbox spacing */
+    input[type="checkbox"] {
+      margin-right: 8px;
+      transform: scale(1.1);
+    }
+
+    /* Multi-select styling */
+    select[multiple] {
+      height: 80px;
+    }
+
+    /* Button styling */
+    button {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <form>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Name">
 
+    <label for="phone">Phone Number</label>
+    <input id="phone" name="phone" type="text" placeholder="Phone Number">
+
+    <label for="address">Address</label>
+    <input id="address" name="address" type="text" placeholder="Address">
+
+    <label for="checkbox">
+      <input type="checkbox" id="checkbox" name="checkbox">
+      Have you ever lived with a Dog before?
+    </label>
+
+    <label for="multiSelect">Please select your preferred breeds</label>
+    <select multiple id="multiSelect" name="breeds">
+      <option value="beagle">Beagle</option>
+      <option value="lab">Lab</option>
+      <option value="pitbull">Pit Bull</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
 </body>
 
 </html>
